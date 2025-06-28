@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:acrylic="clr-namespace:Xe.AcrylicView;assembly=Xe.AcrylicView"
+             xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="Quiz.Views.WelcomePage"
+             Title="WelcomePage">
+    <Grid RowDefinitions="*, Auto, Auto, 0.5*">
+        <Image Source="welcome_bg.jpg" Aspect="AspectFill" Grid.RowSpan="4"/>
+
+
+        <Border Grid.Row="0" Stroke="White" StrokeShape="RoundRectangle 40" StrokeThickness="2" Margin="10">
+            <Image Source="welcome.png" Aspect="AspectFill" Grid.Row="0" ZIndex="2"/>
+        </Border>
+
+        <Label Grid.Row="1" FontAttributes="Bold" Text="Welcome to the Quiz App!" 
+               FontSize="40" WidthRequest="300" HorizontalTextAlignment="Center"
+               LineBreakMode="WordWrap"
+               FontFamily="Courier"
+               LineHeight="1"
+               HorizontalOptions="Center" 
+               VerticalOptions="Center" />
+
+        <Label Text="Strengthen your knowledge by taking a test in the app."
+               Grid.Row="2" FontSize="20" WidthRequest="340" Margin="10" HorizontalOptions="Center"
+               VerticalOptions="Start"
+               LineBreakMode="WordWrap"/>
+
+        <acrylic:AcrylicView Grid.Row="3" EffectStyle="ExtraLight" BorderColor="White"
+                             CornerRadius="50" HeightRequest="50" WidthRequest="50" >
+        </acrylic:AcrylicView>
+        <ImageButton Source="next.png" Grid.Row="3" HeightRequest="50" WidthRequest="50" Padding="10" 
+                         Background="Transparent"
+                         Aspect="AspectFill" VerticalOptions="Center" HorizontalOptions="Center"
+                         CornerRadius="50" Clicked="ImageButton_Clicked">
+            <ImageButton.Behaviors>
+                <mct:IconTintColorBehavior TintColor="White"/>
+            </ImageButton.Behaviors>
+        </ImageButton>
+    </Grid>
+</ContentPage>

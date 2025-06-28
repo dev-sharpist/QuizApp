@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:acrylic="clr-namespace:Xe.AcrylicView;assembly=Xe.AcrylicView"
+             xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Quiz.Views.LoginPage"
+             Title="LoginPage">
+
+    <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto" RowSpacing="20">
+        <Image Grid.RowSpan="5" Source="welcome_bg.jpg" Aspect="Fill"/>
+        <VerticalStackLayout Spacing="10" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" Margin="30,80,30,10">
+            <Label Text="Hello Again!" FontFamily="Courier" FontSize="50"
+                   FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="Black"/>
+            <Label Text="Welcome back, You've been missed!" FontFamily="Courier" FontSize="20" 
+                   HorizontalTextAlignment="Center" TextColor="Black"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout Spacing="20" Grid.Row="1" Margin="20,10" >
+            <acrylic:AcrylicView BorderColor="White" HeightRequest="70" EffectStyle="ExtraLight" Padding="20,10" Background="Transparent" CornerRadius="20">
+                <Entry Placeholder="Enter username" FontSize="18" VerticalOptions="Center"/>
+
+            </acrylic:AcrylicView>
+            <acrylic:AcrylicView BorderColor="White" HeightRequest="70" EffectStyle="ExtraLight" Padding="20,10" Background="Transparent" CornerRadius="20">
+                <Entry Placeholder="Password" IsPassword="True" FontSize="18" VerticalOptions="Center"/>
+
+            </acrylic:AcrylicView>
+            <Label HorizontalTextAlignment="End" Text="Forgot Password?" FontAttributes="Bold" FontFamily="Courier" 
+                   FontSize="16" TextColor="#2196f3" Margin="0" Padding="0"/>
+        </VerticalStackLayout>
+
+        <Button Grid.Row="2" Text="Sign In" Background="Green" CornerRadius="20" TextColor="White"
+                Padding="0,25" FontSize="18" FontAttributes="Bold" FontFamily="Courier" Margin="20,30"
+                Clicked="LoginButton_Clicked"/>
+
+        <VerticalStackLayout Grid.Row="3" Margin="40,10,40,10" Spacing="20">
+            <Label Text="or continue with" FontSize="16" CharacterSpacing="0.5" FontAttributes="Bold" FontFamily="Courier"
+                   HorizontalTextAlignment="Center" TextColor="Black"/>
+            <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
+                <acrylic:AcrylicView BorderColor="White" EffectStyle="ExtraLight" CornerRadius="20">
+
+                    <ImageButton Padding="10,20"
+                        BorderWidth="1" HeightRequest="70" WidthRequest="85"
+                             CornerRadius="20" Source="search.png" Aspect="AspectFit"/>
+                </acrylic:AcrylicView>
+                <acrylic:AcrylicView BorderColor="White" EffectStyle="ExtraLight" CornerRadius="20">
+
+                    <ImageButton Padding="10,20"
+                        BorderColor="White" BorderWidth="1" HeightRequest="70" WidthRequest="85"
+                             CornerRadius="20" Source="apple.png" Aspect="AspectFit"/>
+                </acrylic:AcrylicView>
+                <acrylic:AcrylicView BorderColor="White" EffectStyle="ExtraLight" CornerRadius="20">
+
+                    <ImageButton Padding="10,20"
+                        BorderColor="White" BorderWidth="1" HeightRequest="70" WidthRequest="85"
+                             CornerRadius="20" Source="facebook.png" Aspect="AspectFit"/>
+                </acrylic:AcrylicView>
+
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+        <HorizontalStackLayout Grid.Row="4" HorizontalOptions="Center" Spacing="5" Margin="0,0,0,20">
+
+            <Label TextColor="Black" Text="Don't have an account?" FontFamily="Courier" FontAttributes="Bold" CharacterSpacing="0.5"/>
+            <Label Text="Register Now" TextColor="#2196f3" FontFamily="Courier" FontAttributes="Bold" CharacterSpacing="0.5"/>
+        </HorizontalStackLayout>
+    </Grid>
+</ContentPage>
